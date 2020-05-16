@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 43-->
+
+<head>
+    <title>Practica 43</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var game = {
+            nombre: 'lali',
+            point: 0,
+            print: function() {
+                document.write('Nombre:');
+                document.write('<br>');
+                document.write(this.nombre);
+                document.write('<br>');
+                document.write('Puntos:');
+                document.write(this.point);
+                document.write('<br>');
+            },
+            uppoint: function(number) {
+                this.point = this.point + number;
+            },
+            win: function() {
+                if (this.point >= 1000) {
+                    document.write('USTED HA GANADO!!!');
+                }
+            }
+        };
+
+        game.print();
+        game.uppoint(500);
+        game.win();
+        game.uppoint(505);
+        game.win();
+        game.print();
+    </script>
+
+</body>
+
+</html>
